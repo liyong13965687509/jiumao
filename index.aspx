@@ -371,6 +371,7 @@
             float: left;
             margin-left: 5px;
             font-family: Microsoft YaHei;
+            overflow-y: auto;
         }
 
         #inventoryStatusContent .content-right span {
@@ -382,7 +383,7 @@
         }
 
         #inventoryStatusContent .logistics-circle {
-            padding: 10px 25px;
+            padding: 9px 25px;
 
         }
 
@@ -492,7 +493,7 @@
             display: inline-block;
             width: 168px;
             height: 8px;
-            border: 1px solid #000;
+            border: 1px solid #6772ff;
             border-radius: 4px;
             background-color: #c9c9c9;
 
@@ -588,7 +589,8 @@
             vertical-align: middle;
         }
 
-        #increaseDecreaseContent ul.body-row > li > img {
+        #increaseDecreaseContent ul.body-row > li > a {
+            display: inline-block;
             vertical-align: middle;
         }
 
@@ -614,29 +616,31 @@
         #shippingSpaceWarningContent {
             height: 463px;
             background-color: #fff;
+
         }
 
         #shippingSpaceWarningContent .content-left {
-            width: 380px;
+            width: 360px;
             height: 463px;
             background-color: #fff;
-            float: left;
+            display: inline-block;
         }
 
         #echartsPie {
-            width: 380px;
+            width: 360px;
             height: 463px;
         }
 
         #shippingSpaceWarningContent .content-right {
-            width: 690px;
+            width: 710px;
             height: 463px;
-            float: left;
+            display: inline-block;
+            overflow-y: auto;
 
         }
 
         #shippingSpaceWarningContent .content-right .right-body {
-            padding: 10px 0px;
+            padding: 9px 0px;
         }
 
         #shippingSpaceWarningContent .content-right .right-body li {
@@ -670,30 +674,29 @@
         }
 
         #shippingSpaceWarningContent .box-right .accounted span {
-            font-size: 16px;
+            font-size: 24px;
 
         }
 
         #shippingSpaceWarningContent .box-right .price {
             position: absolute;
-            right: 20px;
-            top: 18px;
+            right: 25px;
+            top: 8px;
         }
 
         #shippingSpaceWarningContent .box-right .price span:first-child {
-            font-size: 30px;
+            font-size: 30px !important;
             color: #b428cf;
         }
 
-        #shippingSpaceWarningContent .box-right .price span:first-child {
+        #shippingSpaceWarningContent .box-right .price span:last-child {
             font-size: 18px;
-
         }
 
         #shippingSpaceWarningContent .box-right .space {
             width: 170px;
             position: absolute;
-            top: 30px;
+            top: 33px;
         }
 
         #shippingSpaceWarningContent .box-right .space span {
@@ -703,10 +706,10 @@
         #shippingSpaceWarningContent .box-right .space .progress-bar {
             width: 168px;
             height: 8px;
-            border: 1px solid #000;
+            border: 1px solid #6772ff;
             border-radius: 4px;
             background-color: #c9c9c9;
-            margin-top: 8px;
+            margin-top: 5px;
         }
 
         #shippingSpaceWarningContent .box-right .space .progress-bar .bar-body {
@@ -798,7 +801,170 @@
         }
 
         .index02 .activity-trailer .activity-right img {
-            padding: 0 20px;
+            margin: 0 20px;
+        }
+    </style>
+    <!--liutong-->
+    <style type="text/css">
+        .freight_center_content {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .freight_center_content h3 {
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            color: #000;
+            font-size: 30px;
+            font-weight: normal;
+            font-family: "Microsoft YaHei";
+        }
+
+        .freight_center_content .airLine {
+            width: 33%;
+            float: left;
+        }
+
+        .freight_center_content .conductBox {
+            width: 100%;
+            height: 127px;
+            overflow: hidden;
+        }
+
+        .freight_center_content .conductBox > div {
+            float: left;
+        }
+
+        .freight_center_content .cardActivity {
+            width: 36px;
+            height: 100px;
+            padding-top: 10px;
+            margin: 0 2px;
+        }
+
+        .freight_center_content .arrow {
+            width: 20px;
+            margin-top: 15px;
+            margin-left: 5px;
+        }
+
+        .freight_center_content .conduct {
+            width: 280px;
+            height: 90px;
+            padding: 10px 0;
+            line-height: 110px;
+            /*background:url('../img/Default2018A/cardBackground.png');*/
+            background-size: 280px 110px;
+            border-radius: 5px;
+            box-shadow: 1px 2px 5px #6f6f6f;
+        }
+
+        .freight_center_content .conduct a {
+            float: left;
+            width: 86px;
+            height: 100%;
+        }
+
+        .freight_center_content .conduct > div {
+            float: left;
+            height: 90px;
+        }
+
+        .freight_center_content .conduct img {
+            width: 86px;
+            height: 90px;
+        }
+
+        .freight_center_content .conduct .information {
+            position: relative;
+        }
+
+        .freight_center_content .conduct .information > div {
+            height: 25px;
+            padding: 10px 0;
+        }
+
+        .freight_center_content .conduct .information > div > div {
+            float: left;
+        }
+
+        .freight_center_content .conduct .information .formalStow .shipSpace p {
+            margin-top: -4px;
+            margin-bottom: 2px;
+        }
+
+        .freight_center_content .conduct .information .readyStow .stowBar {
+            margin-top: 6px;
+            margin-bottom: 2px;
+        }
+
+        .freight_center_content .conduct .information .price {
+            font-size: 0px;
+        }
+
+        .freight_center_content .conduct .information .price span {
+            float: left;
+            height: 26px;
+            line-height: 40px;
+            text-align: center;
+            margin-right: 1px;
+            font-family: "Microsoft YaHei";
+        }
+
+        .freight_center_content .conduct .information .price .normal {
+            font-size: 12px;
+            font-weight: bolder;
+        }
+
+        .freight_center_content .conduct .information .price span:not(.normal) {
+            width: 14px;
+            height: 26px;
+            line-height: 26px;
+            background-image: url('img/Default2018A/priceBackground.png');
+            background-size: cover;
+            color: #fff;
+            font-size: 20px;
+            padding: 0 1px;
+        }
+
+        .freight_center_content .conduct .information .shipSpace {
+            margin-right: 4px;
+        }
+
+        .freight_center_content .conduct .information p {
+            font-size: 12px;
+            height: 12px;
+            line-height: 12px;
+            font-family: "Microsoft YaHei";
+        }
+
+        .freight_center_content .conduct .information > p {
+            position: absolute;
+            left: 0;
+            top: 39px;
+        }
+
+        .freight_center_content .conduct .information .stowBar {
+            width: 80px;
+            height: 8px;
+            border-radius: 4px;
+            border: 1px solid #6772ff;
+        }
+
+        .freight_center_content .conduct .information .stowBar .progress {
+            width: 60px;
+            height: 8px;
+            border-radius: 4px;
+        }
+
+        .freight_center_content .conduct .information .formalStow .progress {
+            background-color: #b326cf;
+        }
+
+        .freight_center_content .conduct .information .readyStow .progress {
+            background-color: #16a5fb;
         }
     </style>
 </head>
@@ -1219,6 +1385,7 @@
 
                         </div>
                     </div>
+
                     <div class="side-bar">
                         <div class="pre">
                             <div class="dot"></div>
@@ -1298,9 +1465,10 @@
                         </div>
                     </div>
                     <div class="activity-right">
-                        <img src="img/Default2018A/active.png" alt="">
-                        <img src="img/Default2018A/active.png" alt="">
-                        <img src="img/Default2018A/active.png" alt="">
+                        <a href="javascript:void(0);"><img src="img/Default2018A/active.png" alt=""></a>
+                        <a href="javascript:void(0);"><img src="img/Default2018A/active.png" alt=""></a>
+                        <a href="javascript:void(0);"><img src="img/Default2018A/active.png" alt=""></a>
+
                     </div>
                 </div>
 
@@ -1382,7 +1550,565 @@
         //        ]
         //    ]
 
+
+        //产品数组
+        //重版超市数组
+        var heavyMarket_arr =
+            [
+                [
+                    ["欧洲线", "europe"],
+                    [
+                        [
+                            1,//产品编号
+                            "CZ-上海",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            14.98,//正装价格,
+                            0.9,//备装已用舱位(百分比)
+                            11.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            2,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            1,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            3,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            1,//产品编号
+                            "CZ-上海",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            14.98,//正装价格,
+                            0.9,//备装已用舱位(百分比)
+                            11.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            2,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            1,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            3,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            1,//产品编号
+                            "CZ-上海",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            14.98,//正装价格,
+                            0.9,//备装已用舱位(百分比)
+                            11.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            2,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            1,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            3,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ]
+                    ]
+                ]
+            ];
+
+        //产品专供数组
+        var productsOnly_arr =
+            [
+                [
+                    ["欧洲线", "europe"],
+                    [
+                        [
+                            1,//产品编号
+                            "CZ-上海",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            14.98,//正装价格,
+                            0.9,//备装已用舱位(百分比)
+                            11.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            2,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            1,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            3,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ]
+                    ]
+                ]
+            ];
+
+
+        //最新更新数组
+        var lastUpdated_arr =
+            [
+                [
+                    ["美洲线", "americas"],
+                    [
+                        [
+                            1,//产品编号
+                            "CZ-上海",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            14.98,//正装价格,
+                            0.9,//备装已用舱位(百分比)
+                            11.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0,//产品所属:0-自营产品，1-物流圈产品
+                            2//0-价格下降,1-价格上升,2-价格持平
+                        ],
+                        [
+                            2,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            1,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0,//产品所属:0-自营产品，1-物流圈产品
+                            0//0-价格下降,1-价格上升,2-价格持平
+                        ],
+                        [
+                            3,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0,//产品所属:0-自营产品，1-物流圈产品
+                            1//0-价格下降,1-价格上升,2-价格持平
+                        ]
+                    ]
+                ],
+                [
+                    ["欧洲线", "europe"],
+                    [
+                        [
+                            1,//产品编号
+                            "CZ-上海",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            14.98,//正装价格,
+                            0.9,//备装已用舱位(百分比)
+                            11.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0,//产品所属:0-自营产品，1-物流圈产品
+                            1//0-价格下降,1-价格上升,2-价格持平
+                        ],
+                        [
+                            2,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            1,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0,//产品所属:0-自营产品，1-物流圈产品
+                            0//0-价格下降,1-价格上升,2-价格持平
+                        ],
+                        [
+                            3,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0,//产品所属:0-自营产品，1-物流圈产品
+                            1//0-价格下降,1-价格上升,2-价格持平
+                        ]
+                    ]
+                ],
+                [
+                    ["印度线", "India"],
+                    [
+                        [
+                            1,//产品编号
+                            "CZ-上海",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            14.98,//正装价格,
+                            0.9,//备装已用舱位(百分比)
+                            11.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            0,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0,//产品所属:0-自营产品，1-物流圈产品
+                            0//0-价格下降,1-价格上升,2-价格持平
+                        ],
+                        [
+                            2,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0,//产品所属:0-自营产品，1-物流圈产品
+                            0//0-价格下降,1-价格上升,2-价格持平
+                        ],
+                        [
+                            3,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0,//产品所属:0-自营产品，1-物流圈产品
+                            1//0-价格下降,1-价格上升,2-价格持平
+                        ]
+                    ]
+                ]
+            ];
+
+
+        //热门航线数组
+        var hotAirline_arr =
+            [
+                [
+                    ["美洲线", "americas"],
+                    [
+                        [
+                            1,//产品编号
+                            "CZ-上海",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            14,//正装价格,
+                            0.9,//备装已用舱位(百分比)
+                            11.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            2,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            3,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ]
+                    ]
+                ],
+                [
+                    ["欧洲线", "europe"],
+                    [
+                        [
+                            1,//产品编号
+                            "CZ-上海",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            14.98,//正装价格,
+                            0.9,//备装已用舱位(百分比)
+                            11.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            2,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            1,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            3,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ]
+                    ]
+                ],
+                [
+                    ["印度线", "India"],
+                    [
+                        [
+                            1,//产品编号
+                            "CZ-上海",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            14.98,//正装价格,
+                            0.9,//备装已用舱位(百分比)
+                            11.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            0,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            2,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            1,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ],
+                        [
+                            3,//产品编号
+                            "CZ-北京",//产品名称
+                            1234,//产品图片地址
+                            0.2,//正装已用舱位(百分比)
+                            17.43,//正装价格,
+                            0.5,//备装已用舱位(百分比)
+                            17.36,//备装价格
+                            "CZ",//航空公司
+                            "2017-12-25",//日期
+                            0,//血拼:0-关,1-开
+                            0,//限时:0-关,1-开
+                            1,//众筹:0-关,1-开
+                            0,//产品活动背景开关:0-关,1-开
+                            0//产品所属:0-自营产品，1-物流圈产品
+                        ]
+                    ]
+                ]
+            ];
+        //二级导航id对应数组
+        var freightCenter_data = [["heavyMarket", heavyMarket_arr], ["productsOnly", productsOnly_arr], ["lastUpdated", lastUpdated_arr], ["hotAirline", hotAirline_arr]];
+
+
         // 情报基地模拟数据
+
+        // 价格趋势
         var priceTrend_arr = [
             [
                 'priceBig.png', //图片地址
@@ -1398,6 +2124,8 @@
             ]
         ];
 
+        // act: 库存情况
+        // date : '2018-1-1',
         var inventoryStatus_arr = [
             "欧洲", "europ",
             [
@@ -1406,7 +2134,7 @@
                     "CZ-上海", //产品名称
                     1, //产品图片地址
                     0.2, //正装已用舱位(百分比)
-                    14.1,//正装价格,
+                    0,//正装价格,
                     0.8, //备装已用舱位(百分比)
                     12, //备装价格
                     "CZ", //航空公司
@@ -1443,18 +2171,17 @@
             [14191, 32035, 11439, 13955, 20347, 25200, 25269],//库存数量
             [10000, 21200, 3985, 5900, 858, 600, 500]//已定数量
         ];
-
+        // 涨跌幅度
         var increaseDecrease_arr = [
             [
                 'rose', [[
-                'productCircle', //产品编号
+                123, //产品编号
                 "CZ-上海", //产品名称
                 "CZ", //航空公司
                 1234,//图片地址
                 22, //上期报价
-                0, //本期报价
+                0.01, //本期报价
                 0.2,//上涨幅度(百分比)
-                'PVG-LAM-CWO', //线路
                 '2017-12-12',//日期
                 '①'//排名
             ],
@@ -1466,7 +2193,6 @@
                     22.13, //上期报价
                     12.34, //本期报价
                     0.2,//上涨幅度(百分比)
-                    'PVG-LAM-CWO', //线路
                     '2017-12-12',//日期,
                     '②'//排名
 
@@ -1479,7 +2205,6 @@
                     22.13, //上期报价
                     12.34, //本期报价
                     0.2,//上涨幅度(百分比)
-                    'PVG-LAM-CWO', //线路
                     '2017-12-12',//日期
                     '③'//排名
                 ]]
@@ -1496,7 +2221,6 @@
                     22, //上期报价
                     0, //本期报价
                     0.2,//上涨幅度(百分比)
-                    'PVG-LAM-CWO', //线路
                     '2017-12-12',//日期
                     '①'//排名
                 ],
@@ -1508,7 +2232,6 @@
                         22.13, //上期报价
                         12.34, //本期报价
                         0.2,//上涨幅度(百分比)
-                        'PVG-LAM-CWO', //线路
                         '2017-12-12',//日期
                         '②'//排名
                     ],
@@ -1520,24 +2243,25 @@
                         22.13, //上期报价
                         12.34, //本期报价
                         0.2,//上涨幅度(百分比)
-                        'PVG-LAM-CWO', //线路
                         '2017-12-12',//日期
                         '③'//排名
                     ]]
             ]
         ];
 
+        // act: 舱位预警
+        // date : 'americas',
         var shippingSpaceWarning_arr = [
             [
                 [
-                    'logisticsCircle', //产品编号
+                    123, //产品编号
                     "CZ-上海", //产品名称
                     1234, //产品图片地址
                     0.9, //舱位(百分比)
                     12, //正装舱位价格
                     "CZ", //航空公司
                     'PVG-LAM-CWO', //线路
-                    '2017-1-1',//日期,
+                    '2017-10-1',//日期,
                     0//物流圈-1 自有-0
                 ],
                 [
@@ -1545,7 +2269,7 @@
                     "CZ-上海", //产品名称
                     1234, //产品图片地址
                     0.9, //舱位(百分比)
-                    12.16, //正装舱位价格
+                    0, //正装舱位价格
                     "CZ", //航空公司
                     'PVG-LAM-CWO', //线路
                     '2017-12-15',//日期,
@@ -1595,6 +2319,8 @@
                     '2017-12-15',//日期,
                     0//物流圈-1 自有-0
                 ]
+
+
             ],
             [
                 ['美洲线', 'americas'],
@@ -1603,7 +2329,6 @@
                 ['澳新线', 'australiaSingapore'],
                 ['中东非洲线', 'middleEast']
             ] //线路名
-
         ];
 
         // 关于我们模拟数据
@@ -1756,7 +2481,7 @@
          */
         Index.prototype.sideBar = function () {
             var _this = this;
-            $(".side-bar").on("click", "li", function () {
+            $(".side-bar").on("click", "li:not('.active')", function () {
                 $(this).addClass("active").siblings("li").removeClass("active");
                 var ID = $(this).attr('id');
                 for (var i = 0; i < index01_data.length; i++) {
@@ -1765,6 +2490,14 @@
                     }
                 }
                 _this.contentTemplate();
+
+
+                // 遮罩层
+                // $('.mask').show().siblings('.content').hide();
+                // setTimeout(function () {
+                //     $('.mask').hide().siblings('.content').show();
+                // }, 500)
+
 
             })
             return this;
@@ -1778,13 +2511,23 @@
          */
         Index.prototype.changeMenu = function () {
             var _this = this;
-            $(".menu").on("click", "li", function (el) {
+            $(".menu").on("click", "li:not('.active')", function (el) {
                 if (!$(this).parent('ul').parent('li').length) {
                     // 点击父级的li 且是没有下拉框的父级
                     if (!$(this).find('ul li').length) {
                         $(this).addClass("active").siblings("li").removeClass("active")
                             .find('.active').removeClass('active');
                         // alert($(this).attr("id"));
+
+                        for (var i = 0; i < freightCenter_data.length; i++) {
+                            if ($(this).attr("id") === freightCenter_data[i][0]) {//在数据中匹配点击的id
+                                if (freightCenter_data[i][1].length == 3) {//判断是否三线排列
+                                    onloadThreeLine(freightCenter_data[i][1])
+                                } else if (freightCenter_data[i][1].length == 1) {//判断是否单线排列
+                                    onloadSingleLine(0, freightCenter_data[i][1])
+                                }
+                            }
+                        }
 
                         _this.mainTemplate();
                     }
@@ -1795,6 +2538,14 @@
                         .siblings("li").removeClass('active').find('.active').removeClass('active');
                     // alert($(this).parent('ul').parent('li').attr("id") + '&' + $(this).attr('class').split(' ')[0]);
                     _this.mainTemplate();
+
+                    for (var i = 0; i < freightCenter_data.length; i++) {
+                        if ($(this).parent('ul').parent('li').attr("id") == freightCenter_data[i][0]) {//在数据中匹配点击子集的父级的id
+                            for (var j = 0; j < freightCenter_data[i][1].length; j++)
+                                if ($(this).attr('class').split(' ')[0] == freightCenter_data[i][1][j][0][1])//在数据中匹配点击子集的class
+                                    onloadSingleLine(j, freightCenter_data[i][1])
+                        }
+                    }
                 }
                 //阻止冒泡
                 el.stopPropagation();
@@ -1853,7 +2604,7 @@
             var temp_html = '';
             for (var i = 0; i < params.length; i++) {
                 if (params[i].length <= 2) {
-                    temp_html += "<li id='" + params[i][1] + "'>" + params[i][0] + "</li>";
+                    temp_html += "<li id='" + params[i][1] + "'><span>" + params[i][0] + "</span></li>";
                 } else {
                     temp_html += '<li id="' + params[i][1] + '"><span>' + params[i][0] + '</span><i></i><ul class="downLoad">';
                     for (var j = 0; j < params[i][2].length; j++) {
@@ -1883,9 +2634,13 @@
             var _this = this;
             var ID = $("#vertical_nav .active").attr('id');
             var temp_html = '';
-            temp_html += '<div class="' + ID + '_content content"></div>';
+            temp_html += '<div class="mask" style="display:none;background-color: pink;width:1070px;height: 463px;position: absolute"></div><div class="' + ID + '_content content"></div>';
             $(".main").html(temp_html);
+
             _this.mainTemplate();
+
+            //页面初始化
+            onloadSingleLine(0, freightCenter_data[0][1]);
             return this;
         }
 
@@ -1964,14 +2719,14 @@
             // 定义大图定位数组
             var imgBoxArr = [
                 ["1070", "463", "0", "0"],
-                ["535", "468", "0", "0", "536", "468", "0", "540"],
-                ["602", "454", "0", "0", "460", "220", "0", "612", "460", "220", "230", "612"],
-                ["530", "260", "0", "0", "530", "190", "265", "0", "530", "190", "0", "535", "530", "260", "195", "535"],
+                ["532", "463", "0", "0", "532", "463", "0", "538"],
+                ["602", "463", "0", "0", "458", "226", "0", "612", "458", "226", "237", "612"],
+                ["530", "260", "0", "0", "530", "193", "270", "0", "530", "193", "0", "540", "530", "260", "203", "540"],
                 ["710", "284", "0", "0", "352", "165", "289", "0", "352", "165", "289", "357", "350", "226", "0", "715", "350", "226", "231", "715"],
-                ["710", "304", "0", "0", "352", "148", "314", "0", "352", "148", "314", "360", "354", "145", "0", "720", "350", "146", "155", "720", "350", "146", "310", "720"],
-                ["350", "148", "0", "0", "350", "148", "153", "0", "350", "148", "306", "0", "350", "456", "0", "355", "350", "148", "0", "710", "350", "148", "153", "710", "350", "148", "306", "710"],
-                ["350", "148", "0", "0", "350", "148", "153", "0", "350", "148", "306", "0", "350", "226", "0", "355", "350", "226", "231", "355", "350", "148", "0", "710", "350", "148", "153", "710", "350", "148", "306", "710"],
-                ["352", "145", "0", "0", "352", "145", "155", "0", "352", "145", "310", "0", "352", "145", "0", "357", "352", "145", "155", "357", "352", "145", "310", "357", "352", "145", "0", "714", "352", "145", "155", "714", "352", "145", "310", "714"]
+                ["710", "305", "0", "0", "352", "148", "315", "0", "352", "148", "315", "360", "350", "148", "0", "720", "350", "148", "158", "720", "350", "148", "316", "720"],
+                ["350", "148", "0", "0", "350", "148", "158", "0", "350", "148", "316", "0", "350", "463", "0", "360", "350", "148", "0", "720", "350", "148", "158", "720", "350", "148", "316", "720"],
+                ["350", "148", "0", "0", "350", "148", "158", "0", "350", "148", "316", "0", "350", "226", "0", "360", "350", "226", "237", "360", "350", "148", "0", "720", "350", "148", "158", "720", "350", "148", "316", "720"],
+                ["350", "148", "0", "0", "350", "148", "158", "0", "350", "148", "316", "0", "350", "148", "0", "360", "350", "148", "158", "360", "350", "148", "316", "360", "350", "148", "0", "720", "350", "148", "158", "720", "350", "148", "316", "720"]
             ];
 
             // var e=$(".center .imgBox .imgDiv").index();
@@ -1998,7 +2753,6 @@
         Index.prototype.echartsBar = function (params) {
             // 日期处理
             var date_temp = new Date(params[3]).getTime();
-
             var moth_temp = '';
             var day_temp = '';
             var date_arr = [];
@@ -2120,6 +2874,7 @@
 
 
             myChart.on('click', function (params) {
+                var year_temp = '';
                 var moth_temp = '';
                 var day_temp = '';
                 var temp_html = '';
@@ -2128,9 +2883,10 @@
                     // alert(params.value);
                     for (var i = 0; i < time_arr.length; i++) {
                         if (params.value == String(time_arr[i][0])) {
+                            year_temp = String(new Date(time_arr[i][1]).getFullYear());
                             moth_temp = String(new Date(time_arr[i][1]).getMonth() + 1);
                             day_temp = String(new Date(time_arr[i][1]).getDate());
-                            temp_html = moth_temp + '-' + day_temp;
+                            temp_html = year_temp + '-' + moth_temp + '-' + day_temp;
                             alert(temp_html);
                         }
                     }
@@ -2177,7 +2933,6 @@
                 legend: {
                     orient: 'vertical',
                     x: 'left',
-
                     data: legend_arr,
                     textStyle: {
                         color: '#646464'
@@ -2188,9 +2943,9 @@
                 },
                 series: [
                     {
-
                         type: 'pie',
                         radius: ['40%', '70%'],
+                        legendHoverLink: false,
                         avoidLabelOverlap: false,
                         label: {
                             normal: {
@@ -2260,14 +3015,19 @@
         Index.prototype.imgGroupTemplate = function (params) {
             var main_html = '';
             var temp_html = "";
+            var temp_link = '';
             for (var i = 0; i < params.length; i++) {
-                temp_html += '<div class="imgDiv"><a href="' + params[i][1] + '"><img src="img/Default2018A/' + params[i][0] + '" alt=""></a></div>'
+                temp_link = params[i][1] ? params[i][1] : 'javascript:void(0)';
+                temp_html += '<div class="imgDiv"><a href="' + temp_link + '"><img src="img/Default2018A/' + params[i][0] + '" alt=""></a></div>'
             }
             main_html += '<div id="priceTrendContent"><div class="imgBox">' +
                 temp_html +
                 '</div></div>';
             return main_html;
         }
+
+
+        //------------------------------------------------------@情报基地板块开始-------------------------------------------------//
 
         /**
          * BEGIN 库存情况模板
@@ -2306,7 +3066,7 @@
             var fall_html = '';
 
             for (var i = 0; i < params[0][1].length; i++) {
-                rose_html += '<li><ul class="body-row"><li><span class="number">' + params[0][1][i][9] + '</span><img src="img/Default2018A/' + params[0][1][i][0] + '.png" alt=""></li>' +
+                rose_html += '<li><ul class="body-row"><li><span class="number">' + params[0][1][i][8] + '</span><a href="javascript:void(0);"><img src="img/Default2018A/' + params[0][1][i][0] + '.png" alt=""></a></li>' +
                     '<li><div class="price-top">上周报价</div><div class="price-bot">' + _this.numberDeal(params[0][1][i][4]) + '/kg</div></li>' +
                     '<li><div class="price-top">本周报价</div><div class="price-bot">' + _this.numberDeal(params[0][1][i][5]) + '/kg</div></li>' +
                     '<li><div class="price-top">增长幅度</div><div class="price-bot">' + params[0][1][i][6] * 100 + '%</div></li>' +
@@ -2315,7 +3075,7 @@
 
             for (var i = 0; i < params[1][1].length; i++) {
 
-                fall_html += '<li><ul class="body-row"><li><span class="number">' + params[1][1][i][9] + '</span><img src="img/Default2018A/' + params[1][1][i][0] + '.png" alt=""></li>' +
+                fall_html += '<li><ul class="body-row"><li><span class="number">' + params[1][1][i][8] + '</span><a href="javascript:void(0);"><img src="img/Default2018A/' + params[1][1][i][0] + '.png" alt=""></a></li>' +
                     '<li><div class="price-top">上周报价</div><div class="price-bot">' + _this.numberDeal(params[1][1][i][4]) + '/kg</div></li>' +
                     '<li><div class="price-top">本周报价</div><div class="price-bot">' + _this.numberDeal(params[1][1][i][5]) + '/kg</div></li>' +
                     '<li><div class="price-top">下跌幅度</div><div class="price-bot">' + params[1][1][i][6] * 100 + '%</div></li>' +
@@ -2372,22 +3132,26 @@
         Index.prototype.inventoryCardTempalte = function (params) {
             var _this = this;
             var card_html = '';
-
             card_html += '<div class="product-box">' +
-                '<div class="box-left"><a href="javascript:void(0);"><img src="img/Default2018A/' + params[0] + '.png" alt=""></a></div>' +
-                '<div class="box-right">' +
-                '<div class="price"><span>价格</span> <span class="suit-price">' + _this.numberDeal(params[4]) + '</span><span>(正)</span>' +
-                '<span>/</span><span class="backup-price">' + _this.numberDeal(params[6]) + '</span><span>(备)</span></div>' +
-                ' <div class="suit-bar"><div class="progress-bar"><div class="bar-body"></div></div>' +
-                '<span>正装</span></div>' +
-                ' <p>剩余舱位</p>' +
-                '<div class="backup-bar">' +
-                '<div class="progress-bar"><div class="bar-body"></div></div>' +
-                '<span>备装</span></div>' +
-                '<div class="route"><span>路线: ' + params[8] + '</span></div></div>' +
-                '<div class="book"><a href="javascript:void(0);"><span>立即订舱</span></a></div>';
+                '<div class="box-left"><a href="javascript:void(0);"><img src="img/Default2018A/' + params[0] + '.png" alt=""></a></div>';
+            if (params[4] === 0) {
+                card_html += '<div class="box-right" style="right: 80px;"><img src="img/Default2018A/sellOut.png" alt="" style="width: auto;"></div></div>'
+            } else {
+                card_html += '<div class="box-right">' +
+                    '<div class="price"><span>价格</span> <span class="suit-price">' + _this.numberDeal(params[4]) + '</span><span>(正)</span>' +
+                    '<span>/</span><span class="backup-price">' + _this.numberDeal(params[6]) + '</span><span>(备)</span></div>' +
+                    ' <div class="suit-bar"><div class="progress-bar"><div class="bar-body"></div></div>' +
+                    '<span>正装</span></div>' +
+                    ' <p>剩余舱位</p>' +
+                    '<div class="backup-bar">' +
+                    '<div class="progress-bar"><div class="bar-body"></div></div>' +
+                    '<span>备装</span></div>' +
+                    '<div class="route"><span>路线: ' + params[8] + '</span></div></div>' +
+                    '<div class="book"><a href="javascript:void(0);"><span>立即订舱</span></a></div></div>';
+            }
 
             return card_html;
+
         }
 
         /**
@@ -2400,37 +3164,209 @@
 
             var card_html = '';
             var _this = this;
-            var date_temp = new Date(params[7]).getTime();
-            var moth_temp = String(new Date(date_temp).getMonth() + 1);
-            var day_temp = String(new Date(date_temp).getDate());
-            params[7] = (moth_temp.length == 1 ? "0" + moth_temp : moth_temp) + "/" + (day_temp.length == 1 ? "0" + day_temp : day_temp);
+            var month = params[7].split('-')[1] / 1 < 10 ? '0' + params[7].split('-')[1] : params[7].split('-')[1];
+            var day = params[7].split('-')[2] / 1 < 10 ? '0' + params[7].split('-')[2] : params[7].split('-')[2];
+            var date = params[7].split('-')[0] + "-" + month + "-" + day;
+            date = date.split('-')[1] + "/" + date.split('-')[2];
 
             card_html += '<div class="product-box">' +
-                '<div class="box-left"><a href="javascript:void(0);"><img src="img/Default2018A/' + params[0] + '.png" alt=""></a></div>' +
-                '<div class="box-right"><div class="accounted"><span>' + params[7] + '</span></div>' +
-                '<div class="price"><span class="number">' + _this.numberDeal(params[4]) + '</span><span class="unit">/kg</span></div>' +
-                '<div class="space"><span>剩余舱位</span><div class="progress-bar"><div class="bar-body"></div></div></div>' +
-                '<div class="route"><span>路线: ' + params[6] + '</span></div></div></div>' +
-                '<div class="book"><a href="javascript:void(0);"><span>立即订舱</span></a></div>';
+                '<div class="box-left"><a href="javascript:void(0);"><img src="img/Default2018A/' + params[0] + '.png" alt=""></a></div>';
+            if (params[4] === 0) {
+                card_html += '<div class="box-right"><img src="img/Default2018A/sellOut.png" alt="" style="width: auto;"></div></div>'
+            } else {
+                card_html += '<div class="box-right"><div class="accounted"><span>' + date + '</span></div>' +
+                    '<div class="price"><span class="number">' + _this.numberDeal(params[4]) + '</span><span class="unit">/kg</span></div>' +
+                    '<div class="space"><span>剩余舱位</span><div class="progress-bar"><div class="bar-body"></div></div></div>' +
+                    '<div class="route"><span>路线: ' + params[6] + '</span></div></div></div>' +
+                    '<div class="book"><a href="javascript:void(0);"><span>立即订舱</span></a></div>';
+            }
 
             return card_html;
         }
+
+        //------------------------------------------------------@情报基地板块结束-------------------------------------------------//
+
 
         /**
          * BEGIN 数字处理
          * Author:LIYONG
          * Date:2017-12-28
-         * @returns {params}
+         * @returns {temp_html}
          */
         Index.prototype.numberDeal = function (params) {
-            params = String(params).indexOf('.') === -1 ? String(params) + '.00'
+            var temp_html = String(params).indexOf('.') === -1 ? String(params) + '.00'
                 : (String(params).split(".")[1].length === 1 ? String(params) + '0' : String(params));
-            return params;
+            return temp_html;
         }
 
         var idp = new Index();
 
     })
+
+
+    //------------------------------------------------------@运价中心板块开始-------------------------------------------------//
+
+
+    //渲染单线排列页面
+    function onloadSingleLine(i, arr) {//i为点击线路的下标
+        $(".freight_center_content").html("");
+        //此处添加加载页面
+        $(".freight_center_content").html("<h3></h3>");
+
+        $("h3").html(arr[i][0][0])
+        if (arr[i][1].length) {
+            addProductCard($(".freight_center_content"), arr[i][1]);
+        }
+
+
+        $(".freight_center_content .conductBox ").css({
+            width: '33%',
+            float: 'left'
+        });
+
+    }
+
+    //渲染三线排列页面
+    function onloadThreeLine(arr) {
+        $(".freight_center_content").html("");
+        $(".freight_center_content").html('<div class="airLine"><h3></h3></div><div class="airLine"><h3></h3></div><div class="airLine"><h3></h3></div>');
+
+        for (var i = 0; i < arr.length; i++) {
+            $(".freight_center_content .airLine").eq(i).find('h3').html(arr[i][0][0]);
+            addProductCard($(".freight_center_content .airLine").eq(i), arr[i][1])
+        }
+
+        $(".freight_center_content .conductBox").css({
+            width: '100%'
+        });
+
+    }
+
+    //添加产品卡片
+    function addProductCard(el, cardArr) {
+        for (var j = 0; j < cardArr.length; j++) {
+            var normalPrice = cardArr[j][4].toString().replace(".", "");//去掉正装价格的.
+            var readyPrice = cardArr[j][6].toString().replace(".", "");//去掉备装价格的.
+
+            //当价格不是四位时进行容错
+            if (normalPrice.length == 1) {
+                normalPrice = "0" + normalPrice + "00"
+            }
+            else if (normalPrice.length == 2) {
+                normalPrice = normalPrice + "00"
+            }
+            else if (normalPrice.length == 3) {
+                normalPrice = normalPrice + "0"
+            }
+            else {
+                normalPrice = normalPrice
+            }
+            if (readyPrice.length == 1) {
+                readyPrice = "0" + readyPrice + "00"
+            }
+            else if (readyPrice.length == 2) {
+                readyPrice = readyPrice + "00"
+            }
+            else if (readyPrice.length == 3) {
+                readyPrice = readyPrice + "0"
+            }
+            else {
+                readyPrice = readyPrice
+            }
+
+            //添加卡片节点
+            el.append('\
+    						    <div class="conductBox">\
+    							    <div class="cardActivity">\
+    								    <a href=""><img src="img/Default2018A/activity_02.png" alt=""></a>\
+    								    <a href=""><img src="img/Default2018A/activity_03.png" alt=""></a>\
+    								    <a href=""><img src="img/Default2018A/activity_01.png" alt=""></a>\
+    							    </div>\
+    							    <div class="conduct">\
+    								    <a href=""><img src="img/Default2018A/' + cardArr[j][2] + '.png" alt=""></a>\
+    								    <div class="information">\
+    									    <div class="formalStow">\
+    										    <div class="shipSpace">\
+    											    <p>正装</p>\
+    											    <div class="stowBar">\
+    												    <div class="progress"></div>\
+    											    </div>\
+    										    </div>\
+    										    <div class="price">\
+    											    <span>' + normalPrice.charAt(0) + '</span>\
+    											    <span>' + normalPrice.charAt(1) + '</span>\
+    											    <span class="normal">.</span>\
+    											    <span>' + normalPrice.charAt(2) + '</span>\
+    											    <span>' + normalPrice.charAt(3) + '</span>\
+    											    <span class="normal">/kg</span>\
+    										    </div>\
+    									    </div>\
+    									    <p>剩余舱位</p>\
+    									    <div class="readyStow">\
+    										    <div class="shipSpace">\
+    											    <div class="stowBar">\
+    												    <div class="progress"></div>\
+    											    </div>\
+    											    <p>备装</p>\
+    										    </div>\
+    										    <div class="price">\
+    											    <span>' + readyPrice.charAt(0) + '</span>\
+    											    <span>' + readyPrice.charAt(1) + '</span>\
+    											    <span class="normal">.</span>\
+    											    <span>' + readyPrice.charAt(2) + '</span>\
+    											    <span>' + readyPrice.charAt(3) + '</span>\
+    											    <span class="normal">/kg</span>\
+    										    </div>\
+    									    </div>\
+    								    </div>\
+    							    </div>\
+                                    <div class="arrow">\
+    								    <img src="" class="arrowImg" alt="">\
+    							    </div>\
+    						    </div>\
+    					    ')
+            el.find(".conduct").eq(j).find('.formalStow .progress').width(el.find(".conduct").eq(j).find('.formalStow .stowBar').width() * cardArr[j][3])//渲染正装舱位条
+            el.find(".conduct").eq(j).find('.readyStow .progress').width(el.find(".conduct").eq(j).find('.readyStow .stowBar').width() * cardArr[j][5]);//渲染备装舱位条
+
+            if (Number(cardArr[j][12] === 0)) {
+                el.find(".conduct").eq(j).css("background-image", "url('img/Default2018A/cardBackground.png')")
+            } else if (Number(cardArr[j][12] === 1)) {
+                el.find(".conduct").eq(j).css("background-image", "url('img/Default2018A/cardBackground_activity.png')")
+            }
+            ;//产品活动背景是否开启
+
+            if (!Number(cardArr[j][9])) {
+                el.find(".cardActivity").eq(j).find('a').eq(0).hide()
+            }
+            ;//血拼是否开启
+            if (!Number(cardArr[j][10])) {
+                el.find(".cardActivity").eq(j).find('a').eq(1).hide()
+            }
+            ;//限时是否开启
+            if (!Number(cardArr[j][11])) {
+                el.find(".cardActivity").eq(j).find('a').eq(2).hide()
+            }
+            ;//众筹是否开启
+
+            if (cardArr[j][13] === 1) {
+                el.find(".conduct a").attr("href", "product1?id")
+            }
+            else {
+                el.find(".conduct a").attr("href", "product2?id")
+            }//点击产品圈跳转订舱地址
+
+            if (Number(cardArr[j][14] === 1)) {
+                el.find(".arrowImg").eq(j).attr("src", "img/Default2018A/bigarrow_top.png")
+            } else if (cardArr[j][14] === 0) {
+                el.find(".arrowImg").eq(j).attr("src", "img/Default2018A/bigarrow_down.png")
+            } else if (cardArr[j][14] === 2) {
+                el.find(".arrowImg").eq(j).attr("src", "img/Default2018A/equal.png")
+            }//上升下降箭头
+        }
+    }
+
+
+    //------------------------------------------------------@运价中心板块结束-------------------------------------------------//
 
 
 </script>
