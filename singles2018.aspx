@@ -1,7 +1,7 @@
 ﻿<!--
 *****************************************************
     V1.0：模板创建
-    托书 1.0
+    托书 1.1 联系人弹出 表格调整
 *****************************************************
  -->
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="singles2018.aspx.cs" Inherits="product_singles2018" %>
@@ -65,6 +65,75 @@
             margin: 0 auto;
         }
     </style>
+    <!--更新浏览器-->
+    <style type="text/css">
+        .update-browser {
+            height: 700px;
+            background: url('../img/product/products2018/repeat_background.png') center repeat;
+        }
+
+        .update-browser .browser {
+            width: 1245px;
+            position: relative;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .update-browser .mall {
+            position: absolute;
+            left: 68px;
+            top: 490px;
+        }
+
+        .update-browser .mall .mall-img {
+            display: block;
+            width: 215px;
+            height: 230px;
+            background: url('../img/product/products2018/mall.png');
+
+        }
+
+        .update-browser .dialog {
+            width: 895px;
+            height: 392px;
+            background: url('../img/product/products2018/dialog.png') center no-repeat;
+            position: absolute;
+            left: 310px;
+            top: 140px;
+
+        }
+
+        .update-browser .dialog span {
+            display: block;
+            position: absolute;
+            width: 530px;
+            height: 170px;
+            font-family: "微软雅黑";
+            font-size: 58px;
+            margin: 0 auto;
+            text-align: center;
+            top: 140px;
+            left: 230px;
+        }
+
+        .update-browser .update {
+            position: absolute;
+            width: 648px;
+            height: 60px;
+            top: 585px;
+            left: 515px;
+        }
+
+        .update-browser .update span {
+            font-family: "微软雅黑";
+            font-size: 50px;
+        }
+
+        .update-browser .update span:nth-child(2) {
+            color: #213ffe;
+
+        }
+    </style>
     <!--2018-1-22 liyong-->
     <style type="text/css">
 
@@ -82,7 +151,6 @@
         .sigle-top table {
             width: 100%;
             font-size: 14px;
-
             margin: 0 auto;
             border-collapse: separate;
             border-spacing: 0;
@@ -196,7 +264,7 @@
             content: "";
             display: inline-block;
             width: 0;
-            height: 126px;
+            height: 180px;
             vertical-align: middle;
         }
 
@@ -208,7 +276,7 @@
             content: "";
             display: inline-block;
             width: 0;
-            height: 126px;
+            height: 180px;
             vertical-align: middle;
         }
 
@@ -222,6 +290,7 @@
 
         .sigle-top table .price-regular td .regular-center span {
             font-size: 16px;
+            line-height: 26px;
         }
 
         .sigle-top table .price-regular td .regular-right span {
@@ -248,13 +317,18 @@
             text-align: center;
         }
 
+        .sigle-top table .expect-total td .td-total span:last-child {
+            padding: 0px 10px;
+            border-bottom: 1px solid #000;
+        }
+
         .sigle-top table .expect-total td .td-total img {
             vertical-align: middle;
             margin-right: 50px;
         }
 
         .sigle-top table .expect-total td p {
-
+            text-align: left;
             display: inline-block;
             padding-left: 30px;
         }
@@ -300,7 +374,7 @@
 
         .sigle-bot {
             width: 100%;
-            border-left: 1px solid #000;
+            border-right: 1px solid #000;
             border-top: 1px solid #000;
             margin-bottom: 15px;
         }
@@ -311,7 +385,7 @@
         }
 
         .sigle-bot .row .column {
-            border-right: 1px solid #000;
+            border-left: 1px solid #000;
             border-bottom: 1px solid #000;
             padding: 0;
             text-align: center;
@@ -337,10 +411,6 @@
             margin: 0;
         }
 
-        .sigle-bot .row-th {
-            /*padding-left: 0.3px;*/
-        }
-
         .sigle-bot .row-th .column {
             background-color: #e0e7ed;
             padding-left: 0.3px;
@@ -353,20 +423,24 @@
 
         .sigle-bot .row-th .column span:first-child {
             font-size: 30px;
-            letter-spacing: 20px;
+            color: #18a4f9;
+        }
+
+        .sigle-bot .row-th .column span:last-child {
+            font-size: 14px;
+            color: #6e7c97;
         }
 
         .sigle-bot .row-port .column:nth-child(even) {
             background-color: #e0e7ed;
         }
+
         .sigle-bot .row-content .column:nth-child(1) {
             padding-left: 0.3px;
             background-clip: content-box;
         }
 
-        .sigle-bot .row-content .column:nth-child(1),
-        .sigle-bot .row-content .column:nth-child(2),
-        .sigle-bot .row-content .column:nth-child(3) {
+        .sigle-bot .row-content .column {
             background-color: #e0e7ed;
         }
 
@@ -405,14 +479,14 @@
         .sigle-bot .row-check .column:last-child {
             position: absolute;
             left: 622px;
-            height: 116px;
+            height: 190px;
         }
 
         .sigle-bot .row-gap .column {
             height: 5px;
         }
 
-        .sigle-bot .row-group .column:before {
+        .sigle-bot .row-group .column:not(.clear-height):before {
             height: 36px;
         }
 
@@ -431,36 +505,24 @@
             height: 36px;
         }
 
-        .sigle-bot .row-other-fee .column:nth-child(2) {
-            background-color: #e0e7ed;
-        }
-
-        .sigle-bot .form-fee .row-group:first-child {
+        .sigle-bot .form-fee .row-group {
             position: relative;
+            overflow: hidden;
         }
 
-        .sigle-bot .form-fee .row-group p.group-cost {
-            position: relative;
-            height: 34px;
+        .sigle-bot .form-fee .row-group .column:first-child {
+            padding: 10px 0;
         }
 
-        .sigle-bot .form-fee .row-group p.group-cost span:last-child {
-            position: absolute;
-            right: 10px;
-        }
-
-        .sigle-bot .form-fee .row-group:first-child .column:last-child {
+        .sigle-bot .form-fee .row-group .column:last-child {
             position: absolute;
             left: 622px;
-            height: 111px;
+            height: 100%;
+            background-color: #fff;
         }
 
         .sigle-bot .row-transportation .column:before {
             height: 36px;
-        }
-
-        .sigle-bot .row-transportation .column:nth-child(2) {
-            background-color: #e0e7ed;
         }
 
         .sigle-bot .form-breaks .row-group:first-child {
@@ -483,30 +545,27 @@
             height: 74px;
         }
 
-        .sigle-bot .form-operation .row-group:first-child {
+        .sigle-bot .row-total .column {
+            line-height: 68px;
+        }
+
+        .sigle-bot .row-total .column:last-child {
+            line-height: 32px;
+        }
+
+        .sigle-bot .row-tel-con {
             position: relative;
         }
 
-        .sigle-bot .form-operation .row-group:first-child .column:last-child {
+        .sigle-bot .row-tel-con .column {
             position: absolute;
             left: 622px;
-            height: 300px;
-            padding: 20px 40px;
-            word-wrap: break-word;
+            top: -37px;
+        }
+
+        .sigle-bot .form-operation .column {
+            padding: 10px 40px;
             text-align: left;
-        }
-
-        .sigle-bot .form-operation .column:nth-child(2) {
-            background-color: #fff !important;
-        }
-
-        .sigle-bot .form-operation .row-group:last-child .column:before {
-            height: 230px;
-        }
-
-        .sigle-bot .form-operation .row-group:last-child .column:first-child span {
-            display: inline-block;
-            margin: 6px 0;
         }
 
         .sigle-bot .row-signature .column:before {
@@ -516,6 +575,11 @@
         .sigle-bot .row-signature .column {
             text-align: left;
             padding-left: 20px;
+        }
+
+        .sigle-bot .row-note .column {
+            text-align: left;
+            padding-left: 220px;
         }
 
         .sigle-bot .row-note .column:before {
@@ -532,7 +596,7 @@
             height: 30px;
             font-size: 22px;
             padding-left: 10px;
-            margin-left: 14px;
+            margin-left: 10px;
         }
 
         .sigle-bot .row-note .column input.op-note {
@@ -545,12 +609,39 @@
         }
 
         .sigle-bot .row-note .column input.into-number {
-            width: 246px;
+            width: 244px;
 
         }
 
         .sigle-bot .row-note .column .note-num {
             padding-left: 39px;
+        }
+
+        .sigle-bot .row-note .column .note-num-ul {
+            border: 1px solid #AAA;
+            position: absolute;
+            right: 296px;
+            top: 97px;
+            display: none;
+            background-color: #fff;
+            max-height: 130px;
+            overflow-y: auto;
+            width: 207px;
+            z-index: 1;
+        }
+
+        .sigle-bot .row-note .column .note-num-ul li {
+
+            cursor: pointer;
+            padding: 0 15px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
+
+        .sigle-bot .row-note .column .note-num-ul li.active {
+            background-color: #e6e6e6;
         }
 
         .sigle-bot .row-contact-title .column:before {
@@ -572,7 +663,50 @@
         }
 
         .sigle-bot .row-contact-con .column {
-            box-shadow: 0px 0px 5px 5px #bfddf7 inset;
+
+            box-shadow: 0 0 0 3px #bfddf7 inset,
+            0 0 0 0px #bfddf7 inset;
+        }
+
+        .sigle-bot .row-contact-con .column span {
+            vertical-align: middle;
+        }
+
+        .sigle-bot .row-contact-con .column input {
+            vertical-align: middle;
+            padding-left: 10px;
+        }
+
+        .sigle-bot .row-contact-con .col-change {
+            position: relative;
+        }
+
+        .sigle-bot .row-contact-con .col-change .contact-people {
+            border: 1px solid #AAA;
+            position: absolute;
+            left: -1px;
+            top: 45px;
+            display: none;
+            background-color: #fff;
+            max-height: 140px;
+            overflow-y: auto;
+            width: 207px;
+        }
+
+        .sigle-bot .row-contact-con .contact-people li {
+            cursor: pointer;
+            padding: 0 15px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .sigle-bot .row-contact-con .contact-people li.active {
+            background-color: #e6e6e6;
+        }
+
+        .sigle-footer {
+            margin-bottom: 50px;
         }
 
         .sigle-footer .sigle-footer-left {
@@ -589,7 +723,7 @@
             border-radius: 4px;
             line-height: 44px;
             margin-left: 46px;
-            cursor:pointer;
+            cursor: pointer;
         }
 
         .sigle-footer .sigle-footer-left p img {
@@ -616,6 +750,8 @@
 
         .sigle-footer .sigle-footer-right {
             float: left;
+            word-wrap: break-word;
+            width: 547px;
         }
 
         .sigle-footer .sigle-footer-right span {
@@ -666,7 +802,7 @@
 
                             <li>
                                 <div class="td-item"><input type="checkbox" name=""><span>自交 : ￥-0.70/KG</span><br>
-                                    <span>(部分航线(如因平台原因导致拉航班，可获100元保险商家赔偿)(如因平台原因导致拉航班，可获100元保险商家赔偿)不可自交)</span></div>
+                                    <span>(部分航线不可自交)</span></div>
                             </li>
                             <li>
                                 <div class="td-item"><input type="checkbox" name=""><span>外场拍照 : ￥10.00</span></div>
@@ -674,7 +810,7 @@
                             </li>
                             <li>
                                 <div class="td-item"><input type="checkbox" name=""><span>保障商家 : ￥1.0</span><br>
-                                    <span>((如因平台原因导致拉航班，可获100元保险商家赔偿)(如因平台原因导致拉航班，可获100元保险商家赔偿)，可获100元保险商家赔偿)</span>
+                                    <span>(如因平台原因导致拉航班，可获100元保险商家赔偿，可获100元保险商家赔偿)</span>
                                 </div>
                             </li>
                             <div style="clear: both;"></div>
@@ -685,29 +821,30 @@
                 <tr class="price-regular">
                     <td colspan="7">
                         <div class="regular-left"><span>总价规则 :</span></div>
-                        <div class="regular-center"><span>计费重量 = ( 体积 / 0.006 - 重量 ) * 分抛比例 + 重量</span><br>
+                        <div class="regular-center">
+                            <span>1. 计费重量 = ( 体积 / 0.006 - 重量 ) * 分泡比例 + 重量</span><br>
                             <span>若: 体积 / 0.006 < 重量 则: 计费重量 = 重量</span><br>
-                            <span>总运费 = 单价 * 计费重量</span><br>
-                            <span>总价 = 总运费 + 服务费</span></div>
+                            <span>2. 转运费=转运单价*重量</span><br>
+                            <span>若: 转运单价*重量＜最低转运费，则: 转运费=最低转运费</span><br>
+                            <span>3. 总运费 = 单价 * 计费重量 + 转运费</span><br>
+                            <span>4. 总价 = 总运费 + 服务费</span></div>
                         <div class="regular-right"><span>其他杂费清单</span></div>
                         <div style="clear: both;"></div>
                     </td>
-                    <!--<td colspan="2"></td>-->
-                    <!--<td colspan="3">-->
-                    <!--</td>-->
-                    <!--<td colspan="2"></td>-->
+
                 </tr>
                 <tr class="expect-total">
-                    <!--<td ></td>-->
+
                     <td colspan="7">
                         <div class="total-left">
                             <span>预计总价 :</span>
                         </div>
                         <div class="total-right">
-                            <div class="td-total"><img src="../img/product/products2018/freight.jpg" alt=""><span>总价 : 5500.00</span>
+                            <div class="td-total"><img src="../img/singles/singles2018/freight.png"
+                                                       alt=""><span>总价 : </span><span>5500.00</span>
                             </div>
-                            <p><span>计费重量 : 300.00</span><br><span>商城优惠 : 0.00</span></p>
-                            <p><span>服务费 : 100.00</span><br><span>单价 : 17.99</span></p>
+                            <p><span>计费重量 : 300.00</span><br><span>服务费 : 100.00</span></p>
+                            <p><span>单价 : 17.99</span><br><span>转运费 : 0.00</span></p>
                         </div>
                         <div style="clear: both;"></div>
                     </td>
@@ -720,8 +857,8 @@
         <!--委托书-->
         <div class="sigle-bot">
             <div class="row row-th">
-                <div class="col-xs-12 column"><p><span>授上海久茂物流有限公司</span><br>
-                    <span>国际货运出口委托书</span></p></div>
+                <div class="col-xs-12 column"><p><span>20131205测试客户</span><br>
+                    <span>授上海久茂物流有限公司国际货运出口委托书</span></p></div>
             </div>
             <div class="row row-port">
                 <div class="col-xs-2 column"><p><span>始发港</span><br><span>DEPARTURE</span></p></div>
@@ -729,22 +866,22 @@
                 <div class="col-xs-3 column"><p><span>目的港</span><br><span>DESTINATION</span></p></div>
                 <div class="col-xs-1 column"><p><span>DAC</span></p></div>
                 <div class="col-xs-2 column"><p><span>运单号</span><br><span>HAWB NO.</span></p></div>
-                <div class="col-xs-3 column"><p><span>607-77842586</span><br><span>/2018-01-11</span></p></div>
+                <div class="col-xs-3 column"><p><span></span><br><span></span></p></div>
             </div>
             <div class="row row-packges">
                 <div class="col-xs-2 column"><p><span>件数</span><br> <span>NO. OF PACKGES</span></p></div>
                 <div class="col-xs-2 column"><p><span>重量</span><br><span>WEIGHT (KGS)</span></p></div>
                 <div class="col-xs-2 column"><p><span>体积</span><br> <span>WOLUME (CM)</span></p></div>
-                <div class="col-xs-2 column"><p><span>航司</span></p></div>
-                <div class="col-xs-4 column"><p><span>货名(中英文填写)</span></p></div>
+                <div class="col-xs-3 column"><p><span>产品名称</span></p></div>
+                <div class="col-xs-3 column"><p><span>航班日期</span></p></div>
 
             </div>
             <div class="row row-content">
                 <div class="col-xs-2 column"><p><span>30</span></p></div>
                 <div class="col-xs-2 column"><p><span>1,500.0</span></p></div>
                 <div class="col-xs-2 column"><p><span>10.000</span></p></div>
-                <div class="col-xs-2 column"><p><span></span></p></div>
-                <div class="col-xs-4 column"><p><span></span></p></div>
+                <div class="col-xs-3 column"><p><span>KL-上海重板</span></p></div>
+                <div class="col-xs-3 column"><p><span>2018-1-16</span></p></div>
 
             </div>
             <div class="row row-bill-title">
@@ -754,27 +891,36 @@
 
             <div class="form-charge">
                 <div class="row row-check row-group">
-                    <div class="col-xs-3 column"><p><input type="checkbox"><span>PREPAID</span></p></div>
-                    <div class="col-xs-3 column"><p><input type="checkbox"><span>COLLECT</span></p></div>
+                    <div class="col-xs-3 column"><p><input type="checkbox" checked disabled><span>PREPAID</span></p>
+                    </div>
+                    <div class="col-xs-3 column"><p><input type="checkbox" disabled><span>COLLECT</span></p></div>
                     <div class="col-xs-6 column"><p></p></div>
                 </div>
                 <div class="row row-gap">
                     <div class="col-xs-6 column"><span></span></div>
                 </div>
                 <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>运费</span></p></div>
-                    <div class="col-xs-3 column"><p><span>12.2/KG+转运费</span></p></div>
-                </div>
-                <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>战争附加险</span></p></div>
-                    <div class="col-xs-3 column"><p><span></span></p></div>
+                    <div class="col-xs-6 column"><p><span>运费</span></p></div>
 
                 </div>
                 <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>油料附加险</span></p></div>
-                    <div class="col-xs-3 column"><p><span></span></p></div>
-                    <div class="col-xs-3 column col-tel"><p><span>电话 TEL :</span></p></div>
-                    <div class="col-xs-3 column col-fax"><p><span>传真 FAX :</span></p></div>
+                    <div class="col-xs-3 column"><p><span>运费单价</span></p></div>
+                    <div class="col-xs-3 column"><p><span>100</span></p></div>
+                </div>
+                <div class="row row-group">
+                    <div class="col-xs-3 column"><p><span>活动减免</span></p></div>
+                    <div class="col-xs-3 column"><p><span>0.00</span></p></div>
+                </div>
+                <div class="row row-group">
+                    <div class="col-xs-3 column"><p><span>分泡比例</span></p></div>
+                    <div class="col-xs-3 column"><p><span>1:1000</span></p></div>
+                </div>
+
+                <div class="row row-group">
+                    <div class="col-xs-3 column"><p><span>转运费</span></p></div>
+                    <div class="col-xs-3 column"><p><span>17.99</span><span>/KG</span><span>(最低转运费800)</span></p></div>
+                    <div class="col-xs-3 column col-tel"><p><span>电话 TEL :</span><span>13965687504</span></p></div>
+                    <div class="col-xs-3 column col-fax"><p><span>传真 FAX :</span><span>13965687504</span></p></div>
                 </div>
 
             </div>
@@ -783,23 +929,16 @@
             </div>
 
             <div class="row row-other-fee">
-                <div class="col-xs-3 column"><p><span>其他杂费</span></p></div>
-                <div class="col-xs-3 column"><p><span></span></p></div>
+                <div class="col-xs-6 column"><p><span>服务费</span></p></div>
                 <div class="col-xs-6 column"><p><span>主提单发货人 MAWB SHIPPER'S NAME &ADDRESS:</span></p></div>
             </div>
             <div class="form-fee">
                 <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>报关费 AWB</span></p></div>
-                    <div class="col-xs-3 column"><p><span></span></p></div>
+                    <div class="col-xs-6 column"><p>
+                        <span>报关 :</span><span>100</span><br>
+                        <span>外场拍照 :</span><span>10</span>
+                    </p></div>
                     <div class="col-xs-6 column"><p></p></div>
-                </div>
-                <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>仓储费 T/C</span></p></div>
-                    <div class="col-xs-3 column"><p class="group-cost"><span></span><span>/KGS</span></p></div>
-                </div>
-                <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>卫检费 HEC</span></p></div>
-                    <div class="col-xs-3 column"><p class="group-cost"><span></span><span>/CTNS</span></p></div>
                 </div>
 
 
@@ -809,61 +948,38 @@
                 <div class="col-xs-12 column"><span></span></div>
             </div>
             <div class="row row-transportation">
-                <div class="col-xs-3 column"><p><span>运输费 CTG</span></p></div>
-                <div class="col-xs-3 column"><p><span></span></p></div>
+                <div class="col-xs-6 column"><p><span>其他费用</span></p></div>
                 <div class="col-xs-6 column"><p><span>通知人 NOTIFY PARTY:</span></p></div>
             </div>
             <div class="form-breaks">
                 <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>用户等级减免</span></p></div>
+                    <div class="col-xs-3 column"><p><span>战争附加险</span></p></div>
                     <div class="col-xs-3 column"><p><span></span></p></div>
                     <div class="col-xs-6 column"><p></p></div>
                 </div>
                 <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>活动减免</span></p></div>
+                    <div class="col-xs-3 column"><p><span>油料附加险</span></p></div>
                     <div class="col-xs-3 column"><p><span></span></p></div>
                 </div>
-                <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>运费 TOTAL</span></p></div>
-                    <div class="col-xs-3 column"><p><span></span></p></div>
-                    <div class="col-xs-6 column col-tel"><p><span>备注</span></p></div>
-
+                <div class="row row-group row-total">
+                    <div class="col-xs-3 column"><p><span>总费用 TOTAL</span></p></div>
+                    <div class="col-xs-3 column"><p><span>5500</span></p></div>
+                    <div class="col-xs-6 column col-tel"><p><span>货物品名</span></p></div>
+                </div>
+                <div class="row row-group row-tel-con">
+                    <div class="col-xs-6 column col-tel"><p><span>上海</span></p></div>
                 </div>
 
 
             </div>
-            <div class="form-type">
-                <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>服务类别</span></p></div>
-                    <div class="col-xs-3 column"><p><span>账单</span></p></div>
-                    <div class="col-xs-6 column"><p></p></div>
-                </div>
-                <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>工厂及发票抬头</span></p></div>
-                    <div class="col-xs-3 column"><p><span></span></p></div>
-                </div>
 
-            </div>
             <div class="form-operation">
                 <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>操作事项</span><br>
-                        <span>HANGING INFORMATION</span></p></div>
-                    <div class="col-xs-3 column"><p><span>唛头标记</span><br>
-                        <span>MARKS</span></p></div>
-                    <div class="col-xs-6 column"><p><span>托运人证实以上所填内容全部属实，并愿遵守承运人和代理人的一切规章。</span>
+                    <div class="col-xs-12 column"><p><span>托运人证实以上所填内容全部属实，并愿遵守承运人和代理人的一切规章。</span>
                         <br><span>THE SHIPPER CONFIRMS THAT THE PARTICULARS ON THE FACE HERE OF ARE CORRECT AND AGREES TO THE CONDITIONS OF CARRIAGE OF CARRIER</span>
                         <br><span>如遇运价调整及拉货，请及时通知我司，否则我司概不承担责任。</span>
                     </p></div>
                 </div>
-                <div class="row row-group">
-                    <div class="col-xs-3 column"><p><span>入库时间 :</span><br>
-                        <span>要求出运时间 :</span><br>
-                        <span>航班要求 :</span><br>
-                        <span>其他要求 :</span>
-                    </p></div>
-                    <div class="col-xs-3 column"><p><span></span></p></div>
-                </div>
-
             </div>
 
             <div class="row row-signature">
@@ -878,7 +994,16 @@
                     <span>尺寸备注 </span><input type="text" value="长/cm" class="size">
                     <input type="text" value="宽/cm" class="size">
                     <input type="text" value="高/cm" class="size">
-                    <span class="note-num">进仓编号</span> <input type="text" class="into-number"></p>
+                    <span class="note-num">进仓编号</span> <input type="text" class="into-number">
+                    <ul class="note-num-ul">
+                        <li class=""><span>1fdkglnfbkdnf mxcnvjfnvfkbnfmkdbnfdjmdjfjjjjjjjjjjjjjj</span></li>
+                        <li class=""><span>1</span></li>
+                        <li><span>1</span></li>
+                        <li><span>1</span></li>
+                        <li><span>1</span></li>
+                        <li><span>1</span></li>
+                    </ul>
+                    </p>
                 </div>
 
             </div>
@@ -888,7 +1013,9 @@
                 </div>
             </div>
             <div class="row row-contact-body">
-                <div class="col-xs-2 column"><p><span>联系人</span><b>*</b></p></div>
+                <div class="col-xs-2 column"><p><span>联系人</span><b>*</b></p>
+
+                </div>
                 <div class="col-xs-2 column"><p><span>联系电话</span><b>*</b></p></div>
                 <div class="col-xs-2 column"><p><span>QQ</span><b>*</b></p></div>
                 <div class="col-xs-2 column"><p><span>邮箱</span></p></div>
@@ -898,11 +1025,22 @@
             </div>
 
             <div class="row row-contact-con">
-                <div class="col-xs-2 column"><p><span></span></p></div>
-                <div class="col-xs-2 column"><p><span></span></p></div>
-                <div class="col-xs-2 column"><p><span></span></p></div>
-                <div class="col-xs-2 column"><p><span></span></p></div>
-                <div class="col-xs-4 column"><p><span></span></p></div>
+                <div class="col-xs-2 column col-change"><p>
+                    <span></span><input type="text">
+                </p>
+                    <ul class="contact-people">
+                        <li><span>1fdkglnfbkdnf mxcnvjfnvfkbnfmkdbnfdjmdjfjjjjjjjjjjjjjj</span></li>
+                        <li><span>1</span></li>
+                        <li><span>1</span></li>
+                        <li><span>1</span></li>
+                        <li><span>1</span></li>
+                        <li><span>1</span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-2 column"><p><span></span><input type="text"></p></div>
+                <div class="col-xs-2 column"><p><span></span><input type="text"></p></div>
+                <div class="col-xs-2 column"><p><span></span><input type="text"></p></div>
+                <div class="col-xs-4 column"><p><span></span><input type="text"></p></div>
             </div>
 
 
@@ -924,9 +1062,49 @@
     </div>
     </div>
 </form>
+<!--[if lt IE 9]><script type="text/javascript" src="../js/browserUpdate.js"></script><![endif]-->
 <script type="text/javascript">
     $(function () {
-        // code...
+        // 联系人点击事件
+        $(".row-contact-con .column:eq(0)").click(function () {
+            $(".contact-people").slideDown("slow");
+        })
+        $(".contact-people").hover(function () {
+            if (!$(this).is(":animated")) {
+                $(this).slideDown("slow");
+            }
+        }, function () {
+            if (!$(this).is(":animated")) {
+                $(this).slideUp("slow");
+            }
+        })
+
+        $(".contact-people li").hover(function () {
+            $(this).addClass("active");
+        }, function () {
+            $(".contact-people li").removeClass("active");
+        })
+
+// 进仓编号点击事件
+        $(".into-number").click(function () {
+            $(".note-num-ul").slideDown("slow");
+        })
+        $(".note-num-ul").hover(function () {
+            if (!$(this).is(":animated")) {
+                $(this).slideDown("slow");
+            }
+        }, function () {
+            if (!$(this).is(":animated")) {
+                $(this).slideUp("slow");
+            }
+        })
+
+        $(".note-num-ul li").hover(function () {
+            $(this).addClass("active");
+        }, function () {
+            $(".note-num-ul li").removeClass("active");
+        })
+
     })
 </script>
 </body>
